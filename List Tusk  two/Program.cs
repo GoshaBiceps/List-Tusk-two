@@ -38,7 +38,7 @@ namespace List_Tusk__two
                         break;
 
                     case CommandToDossierDelite:
-                        DeliteDossier(names, positions);
+                        DeleteDossier(names, positions);
                         break;
 
                     case CommandToExsit:
@@ -70,13 +70,13 @@ namespace List_Tusk__two
 
         static void ShowAllDossiers(List<string> names, List<string> positions)
         {
-            int index = 1;
+            
             if (names.Count > 0)
             {
                 for (int i = 0; i < names.Count; i++)
                 {
+                    int index = i + 1;
                     Console.WriteLine($" Индекс [ {index} ] | ФИО : {names[i]} | должность : {positions[i]}");
-                    index++;
                 }
             }
             else
@@ -85,7 +85,7 @@ namespace List_Tusk__two
             }
         }
 
-        static void DeliteDossier(List<string> names, List<string> positions)
+        static void DeleteDossier(List<string> names, List<string> positions)
         {
             if (names.Count > 0)
             {
